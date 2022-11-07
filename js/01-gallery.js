@@ -19,6 +19,7 @@ function createGallerey(galleryItems) {
 }
 
 galleryRef.innerHTML = gallerey;
+
 let instance;
 
 function onGallereyClick(event) {
@@ -38,7 +39,7 @@ function onGallereyClick(event) {
 function onEscKeyDown(e) {
 	const ESC_KEY_CODE = "Escape";
 
-	if (e.code === ESC_KEY_CODE && basicLightbox.visible()) {
+	if (e.code === ESC_KEY_CODE) {
 		instance.close();
 		window.removeEventListener("keydown", onEscKeyDown);
 	}
